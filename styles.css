@@ -70,7 +70,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 94px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,8 +141,8 @@ nav a.active {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  height: 48px;
-  padding-top: 18px;
+  height: 38px;
+  padding-top: 14px;
 }
 
 .heart-row span,
@@ -159,12 +159,12 @@ nav a.active {
 }
 
 .hero {
-  min-height: 640px;
+  min-height: 480px;
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
-  gap: clamp(54px, 7vw, 96px);
-  padding-bottom: 42px;
+  gap: clamp(34px, 5vw, 72px);
+  padding-bottom: 20px;
 }
 
 .grid-floor {
@@ -187,7 +187,7 @@ time,
 
 h1 {
   margin: 0;
-  font-size: clamp(36px, 4.6vw, 76px);
+  font-size: clamp(32px, 3.9vw, 58px);
   line-height: 1.1;
   text-transform: uppercase;
   text-shadow: 5px 5px 0 #000;
@@ -201,17 +201,17 @@ h1 span {
 }
 
 .hero-copy p {
-  max-width: 620px;
+  max-width: 520px;
   margin: 24px 0 0;
   color: var(--muted);
-  font-size: clamp(25px, 2vw, 33px);
+  font-size: clamp(23px, 1.8vw, 29px);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin-top: 38px;
+  margin-top: 30px;
 }
 
 .button {
@@ -219,8 +219,8 @@ h1 span {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  min-height: 58px;
-  padding: 0 22px;
+  min-height: 50px;
+  padding: 0 20px;
   border: 3px solid var(--line);
   background: transparent;
   color: var(--ink);
@@ -266,14 +266,12 @@ h1 span {
 .media-frame {
   margin: 0;
   position: relative;
-  padding: 10px;
-  border: 3px solid var(--line);
-  background: #101314;
-  box-shadow: 0 0 0 2px #000, 10px 10px 0 rgba(0,0,0,0.48);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.media-frame::before,
-.media-frame::after,
 .info-panel::before,
 .closing::before {
   content: "";
@@ -284,30 +282,22 @@ h1 span {
   box-shadow: inset 0 0 0 3px #090909;
 }
 
-.media-frame::before,
 .info-panel::before,
 .closing::before {
   left: -2px;
   top: -2px;
 }
 
-.media-frame::after {
-  right: -2px;
-  bottom: -2px;
-}
-
 .media-frame img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: grayscale(0.86) contrast(1.08) brightness(0.78);
-  background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.08) 0 2px, transparent 2px 5px),
-    #121616;
+  image-rendering: auto;
+  background: transparent;
 }
 
 .hero-frame {
-  height: clamp(390px, 38vw, 620px);
+  height: clamp(300px, 35vw, 500px);
 }
 
 figcaption {
@@ -324,13 +314,13 @@ figcaption {
 
 .pixel-divider {
   height: 17px;
-  margin: 0 -44px 38px;
+  margin: 0 -44px 24px;
   background: repeating-linear-gradient(90deg, var(--red) 0 11px, transparent 11px 22px);
 }
 
 .section-title {
   position: relative;
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   padding-left: 32px;
   font-size: clamp(20px, 2vw, 31px);
   line-height: 1.18;
@@ -355,12 +345,12 @@ figcaption {
 }
 
 .fact-card {
-  min-height: 252px;
+  min-height: 184px;
   display: grid;
   place-items: center;
   align-content: center;
   gap: 15px;
-  padding: 24px 16px;
+  padding: 18px 14px;
   text-align: center;
   background: linear-gradient(#242829, #181b1d);
   border: 3px solid var(--line);
@@ -377,7 +367,7 @@ figcaption {
 .fact-card p {
   margin: 0;
   color: var(--ink);
-  font-size: 26px;
+  font-size: 23px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -439,53 +429,20 @@ figcaption {
 
 .section-rule {
   border-top: 2px solid rgba(216,216,207,0.58);
-  padding-top: 26px;
-  margin-top: 22px;
+  padding-top: 20px;
+  margin-top: 14px;
 }
 
 .history-layout {
   display: grid;
   grid-template-columns: 0.95fr 2fr;
-  gap: 48px;
+  gap: 40px;
   align-items: center;
 }
 
-.pixel-stage {
-  min-height: 170px;
-  position: relative;
-}
-
-.pixel-runner {
-  position: absolute;
-  left: 46px;
-  bottom: 44px;
-  width: 64px;
-  height: 86px;
-  background:
-    linear-gradient(#ef332c 0 13%, #f4c356 13% 31%, #ef332c 31% 62%, #2460d1 62% 100%);
-  box-shadow: 28px 66px #2460d1, -18px 66px #2460d1, 14px -16px #ef332c;
-}
-
-.pixel-hill {
-  position: absolute;
-  right: 30px;
-  bottom: 40px;
-  width: 150px;
-  height: 88px;
-  background: #64b542;
-  clip-path: polygon(0 100%, 62% 0, 100% 100%);
-  box-shadow: inset -18px -12px #2f6d29;
-}
-
-.pixel-ground {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 16px;
-  height: 28px;
-  background: repeating-linear-gradient(90deg, #a62520 0 32px, #ef332c 32px 36px);
-  border-top: 5px solid #111;
-  border-bottom: 5px solid #111;
+.history-scene {
+  width: min(100%, 340px);
+  image-rendering: pixelated;
 }
 
 .history-copy p,
@@ -494,7 +451,7 @@ figcaption {
 .closing p {
   margin: 0 0 14px;
   color: var(--muted);
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .timeline-line {
@@ -502,7 +459,7 @@ figcaption {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 26px;
-  padding: 14px 24px 8px;
+  padding: 8px 24px 4px;
 }
 
 .timeline-line::before {
@@ -510,7 +467,7 @@ figcaption {
   position: absolute;
   left: 22px;
   right: 22px;
-  top: 112px;
+  top: 96px;
   height: 4px;
   background: var(--line);
 }
@@ -519,7 +476,7 @@ figcaption {
   content: "";
   position: absolute;
   right: 12px;
-  top: 103px;
+  top: 87px;
   border-left: 16px solid var(--line);
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
@@ -544,8 +501,8 @@ figcaption {
 }
 
 .timeline-icon {
-  width: 78px;
-  height: 70px;
+  width: 64px;
+  height: 56px;
   margin-bottom: 6px;
 }
 
@@ -576,18 +533,18 @@ figcaption {
   max-width: 210px;
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .hardware-layout {
   display: grid;
   grid-template-columns: 1.2fr 0.82fr 0.52fr;
-  gap: 38px;
+  gap: 32px;
   align-items: center;
 }
 
 .hardware-frame {
-  height: 270px;
+  height: 220px;
 }
 
 .hardware-copy ul {
@@ -601,7 +558,7 @@ figcaption {
   padding-left: 24px;
   margin: 7px 0;
   color: var(--muted);
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .hardware-copy li::before {
@@ -615,7 +572,7 @@ figcaption {
 }
 
 .controller-card {
-  padding: 22px 18px;
+  padding: 18px 16px;
   text-align: center;
   border: 3px solid var(--line);
   background: rgba(255,255,255,0.04);
@@ -632,23 +589,23 @@ figcaption {
 
 .controller-card img {
   width: 100%;
-  height: 142px;
+  height: 173px;
   object-fit: contain;
-  background: #1a1c1f;
-  border: 2px solid #555;
-  filter: grayscale(0.45) contrast(1.08);
+  background: transparent;
+  border: 0;
+  filter: none;
 }
 
 .controller-card p {
   margin: 15px 0 0;
   color: var(--muted);
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .game-row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 22px;
+  gap: 18px;
 }
 
 .game-cart {
@@ -656,26 +613,20 @@ figcaption {
 }
 
 .cart-shell {
-  min-height: 268px;
-  padding: 15px 14px 18px;
-  display: grid;
-  align-content: start;
-  text-align: center;
-  background:
-    linear-gradient(90deg, #6d716d 0 9%, #9a9d98 9% 14%, #656964 14% 19%, transparent 19% 81%, #656964 81% 86%, #9a9d98 86% 91%, #6d716d 91%),
-    #7d817d;
-  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+  min-height: 0;
+  padding: 0;
+  background: transparent;
   box-shadow: 7px 7px 0 #000;
 }
 
 .cart-shell img {
   width: 100%;
-  aspect-ratio: 1 / 0.9;
-  object-fit: cover;
+  aspect-ratio: auto;
+  object-fit: contain;
   image-rendering: pixelated;
-  background: #0b0d10;
-  border: 6px solid #171717;
-  box-shadow: inset 0 0 0 3px var(--red);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .cart-shell h3 {
@@ -696,7 +647,7 @@ figcaption {
 
 .view-games {
   display: flex;
-  margin: 30px auto 0;
+  margin: 22px auto 0;
   min-height: 42px;
   padding-inline: 28px;
   color: var(--muted);
@@ -704,17 +655,14 @@ figcaption {
 }
 
 .game-credit {
-  margin: 14px 0 0;
-  color: var(--dim);
-  font-size: 18px;
-  text-align: center;
+  display: none;
 }
 
 .lower-panels {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 34px;
-  margin-top: 38px;
+  gap: 28px;
+  margin-top: 28px;
 }
 
 .info-panel,
@@ -726,7 +674,7 @@ figcaption {
 }
 
 .info-panel {
-  padding: 30px 28px;
+  padding: 24px 24px;
 }
 
 .panel-body {
@@ -738,9 +686,10 @@ figcaption {
 
 .trophy-icon {
   width: 132px;
-  height: 176px;
+  height: auto;
   justify-self: center;
   filter: drop-shadow(12px 12px 0 #000);
+  image-rendering: pixelated;
 }
 
 .legacy-panel strong {
@@ -761,9 +710,9 @@ figcaption {
   grid-template-columns: 42px 1fr;
   gap: 16px;
   align-items: center;
-  margin: 15px 0;
+  margin: 11px 0;
   color: var(--muted);
-  font-size: 27px;
+  font-size: 24px;
 }
 
 .tiny {
@@ -780,10 +729,10 @@ figcaption {
 .closing {
   display: grid;
   grid-template-columns: 190px 1fr 0.75fr;
-  gap: 32px;
+  gap: 28px;
   align-items: center;
-  margin: 34px 0 0;
-  padding: 30px 42px;
+  margin: 24px 0 0;
+  padding: 24px 36px;
 }
 
 .outline-controller {
@@ -819,7 +768,7 @@ figcaption {
 }
 
 .celebrate {
-  min-height: 72px;
+  min-height: 60px;
   justify-self: stretch;
 }
 
@@ -827,7 +776,7 @@ figcaption {
   position: relative;
   z-index: 1;
   margin-top: 0;
-  padding: 78px 24px 18px;
+  padding: 58px 24px 14px;
   color: var(--ink);
   text-align: center;
   background: #040505;
@@ -839,42 +788,10 @@ figcaption {
   left: 0;
   right: 0;
   top: 0;
-  height: 78px;
-  background:
-    linear-gradient(transparent 72%, #3a2c22 72%),
-    radial-gradient(circle at 38% 38%, #bbb 0 4px, transparent 5px),
-    radial-gradient(circle at 46% 50%, #bbb 0 3px, transparent 4px);
-}
-
-.footer-pixels span {
-  position: absolute;
-  bottom: 13px;
-}
-
-.tree {
-  left: 70px;
-  width: 46px;
-  height: 54px;
-  background: #3c9b45;
-  clip-path: polygon(50% 0, 100% 52%, 72% 52%, 100% 100%, 0 100%, 28% 52%, 0 52%);
-}
-
-.mountain {
-  width: 76px;
-  height: 42px;
-  background: #777d7b;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
-.m1 { left: 280px; }
-.m2 { left: 570px; width: 96px; height: 54px; }
-
-.castle {
-  right: 70px;
-  width: 108px;
-  height: 68px;
-  background: #898e8b;
-  clip-path: polygon(0 100%, 0 38%, 18% 38%, 18% 15%, 30% 15%, 30% 38%, 45% 38%, 45% 0, 58% 0, 58% 38%, 72% 38%, 72% 15%, 86% 15%, 86% 38%, 100% 38%, 100% 100%);
+  height: 58px;
+  width: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
 .site-footer p {
