@@ -266,10 +266,33 @@ h1 span {
 .media-frame {
   margin: 0;
   position: relative;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
+  padding: 10px;
+  border: 3px solid var(--line);
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 5px),
+    #101314;
+  box-shadow: 0 0 0 2px #000, 10px 10px 0 rgba(0,0,0,0.48);
+}
+
+.media-frame::before,
+.media-frame::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--red);
+  box-shadow: inset 0 0 0 3px #090909;
+  z-index: 2;
+}
+
+.media-frame::before {
+  left: -2px;
+  top: -2px;
+}
+
+.media-frame::after {
+  right: -2px;
+  bottom: -2px;
 }
 
 .info-panel::before,
@@ -293,7 +316,9 @@ h1 span {
   height: 100%;
   object-fit: contain;
   image-rendering: auto;
-  background: transparent;
+  background:
+    radial-gradient(circle at center, #d7d7d2 0 56%, #202426 100%);
+  filter: grayscale(0.76) contrast(1.08) brightness(0.76);
 }
 
 .hero-frame {
@@ -647,19 +672,22 @@ figcaption {
 
 .cart-shell {
   min-height: 0;
-  padding: 0;
-  background: transparent;
+  padding: 12px;
+  background:
+    linear-gradient(90deg, #6d716d 0 9%, #9a9d98 9% 14%, #656964 14% 19%, transparent 19% 81%, #656964 81% 86%, #9a9d98 86% 91%, #6d716d 91%),
+    #7d817d;
+  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
   box-shadow: 7px 7px 0 #000;
 }
 
 .cart-shell img {
   width: 100%;
-  aspect-ratio: auto;
+  aspect-ratio: 1 / 0.9;
   object-fit: contain;
   image-rendering: pixelated;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  background: #0b0d10;
+  border: 6px solid #171717;
+  box-shadow: inset 0 0 0 3px var(--red);
 }
 
 .cart-shell h3 {
